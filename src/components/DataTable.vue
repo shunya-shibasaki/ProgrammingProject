@@ -11,7 +11,7 @@
 </template>
 <script lang="ts">
 
-import { Vue, Component, Emit, Watch} from 'vue-property-decorator'
+import Vue from 'Vue'
 
 export default Vue.extend({
   

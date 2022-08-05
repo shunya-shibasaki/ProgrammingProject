@@ -4,16 +4,9 @@
       v-model="drawer"
       app
     >
-      <!--  -->
     </v-navigation-drawer>
-
-    <v-app-bar app>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Application</v-toolbar-title>
-
-
-    </v-app-bar>
+    <!-- ƒwƒbƒ_[ -->
+    <VHeaderCommon :header="vHeader"></VHeaderCommon>
 
     <v-main>
       <!--  -->
@@ -22,7 +15,21 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({ drawer: null }),
-  }
+  import vue from 'vue'
+  // components
+  import VHeaderCommon from './components/Common/VHeaderCommon.vue'
+
+  export default vue.extend({
+    components: {
+      VHeaderCommon
+    },
+    data() {
+      return {
+        vHeader: {
+          title: 'SampleTitle',
+        },
+        drawer: false
+      }
+    }
+  }) 
 </script>
