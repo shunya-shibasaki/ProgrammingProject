@@ -6,7 +6,7 @@
     >
     </v-navigation-drawer>
     <!-- ƒwƒbƒ_[ -->
-    <VHeaderCommon :header="vHeader"></VHeaderCommon>
+    <header-common :header-data="vHeader"></header-common>
 
     <v-main>
       <!--  -->
@@ -17,18 +17,16 @@
 <script>
   import vue from 'vue'
   // components
-  import VHeaderCommon from './components/Common/VHeaderCommon.vue'
+  import HeaderCommon from './components/Common/HeaderCommon.vue'
 
   export default vue.extend({
     components: {
-      VHeaderCommon
+      HeaderCommon
     },
     data() {
       return {
-        vHeader: {
-          title: 'SampleTitle',
-        },
-        drawer: false
+        vHeader: 'SampleTitle',
+        drawer: false,
       }
     }
   }) 

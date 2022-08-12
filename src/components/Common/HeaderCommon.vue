@@ -5,10 +5,10 @@
     height="200px"
     tile
   >
-    <v-toolber dense>
-      <v-appber-nav-icon></v-appber-nav-icon>
+    <v-toolbar dense>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>SampleTitle</v-toolbar-title>
+      <v-toolbar-title>{{ headerData }}</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -23,12 +23,16 @@
       <v-btn icon>
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
-    </v-toolber>
+    </v-toolbar>
   </v-card>
 </template>
 
 <script>
-export default {
-  props: ['header'],
-}
+import vue from 'vue'
+
+export default vue.extend({ 
+  props: [
+    'headerData'
+  ],
+})
 </script>
