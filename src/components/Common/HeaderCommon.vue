@@ -7,32 +7,40 @@
   >
     <v-toolbar dense>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-toolbar-title>
+        {{ headerData }}
+      </v-toolbar-title>
 
-      <v-toolbar-title>{{ headerData }}</v-toolbar-title>
+    <v-spacer></v-spacer>
 
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
+    <btn-common icon>
         <v-icon>mdi-magnify</v-icon>
-      </v-btn>
+      </btn-common>
 
-      <v-btn icon>
+      <btn-common icon>
         <v-icon>mdi-heart</v-icon>
-      </v-btn>
+      </btn-common>
 
-      <v-btn icon>
+      <btn-common icon>
         <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+      </btn-common>
+      
     </v-toolbar>
   </v-card>
 </template>
 
 <script>
 import vue from 'vue'
+// components
+import BtnCommon from '@/components/Common/BtnCommon.vue'
 
 export default vue.extend({ 
   props: [
     'headerData'
   ],
+
+  components: {
+    BtnCommon,
+  },
 })
 </script>

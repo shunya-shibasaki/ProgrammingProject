@@ -5,9 +5,13 @@
       app
     >
     </v-navigation-drawer>
-    <!-- ƒwƒbƒ_[ -->
-    <header-common :header-data="vHeader"></header-common>
+    <!-- ãƒ˜ãƒƒãƒ€ãƒ¼ -->
+    <header-common
+      :header-data="vHeader"
+    >
 
+    </header-common>
+    
     <v-main>
       <!--  -->
     </v-main>
@@ -19,9 +23,10 @@
   // components
   import HeaderCommon from './components/Common/HeaderCommon.vue'
 
+
   export default vue.extend({
     components: {
-      HeaderCommon
+      HeaderCommon,
     },
     data() {
       return {
